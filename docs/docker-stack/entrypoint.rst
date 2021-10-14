@@ -219,7 +219,7 @@ Execute custom code before the Airflow entrypoint
 -------------------------------------------------
 
 If you want to execute some custom code before Airflow's entrypoint you can also add extra code executed
-before the Airflow entrypoint by replacing the entrypoint of Airflow and calling Airflow's entrypoint as
+before the Airflow one by using your custom script and calling Airflow's entrypoint as
 last ``exec`` instruction in your custom one. However you have to remember to use ``dumb-init`` in the same
 way as it is used with Airflow's entrypoint, otherwise you might have problems with proper signal
 propagation (See the next chapter).
