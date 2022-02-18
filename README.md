@@ -17,6 +17,22 @@
  under the License.
 -->
 
+# Build command
+
+```bash
+docker build . \
+--build-arg PYTHON_BASE_IMAGE="python:3.8-slim-buster" \
+--build-arg INSTALL_PROVIDERS_FROM_SOURCES="true" \
+--build-arg AIRFLOW_INSTALLATION_METHOD="." \
+--build-arg AIRFLOW_SOURCES_FROM="." \
+--build-arg AIRFLOW_SOURCES_TO="/opt/airflow" \
+--build-arg AIRFLOW_VERSION="2.2.0.dev0" \
+--build-arg AIRFLOW_CONSTRAINTS_REFERENCE="constraints-main" \
+--build-arg CONSTRAINTS_GITHUB_REPOSITORY="rhisa-tech/airflow" \
+--build-arg AIRFLOW_CONSTRAINTS="constraints-source-providers" \
+--tag rhisatech/airflow:2.2.0.dev0
+```
+
 # Apache Airflow
 
 [![PyPI version](https://badge.fury.io/py/apache-airflow.svg)](https://badge.fury.io/py/apache-airflow)
